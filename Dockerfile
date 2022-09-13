@@ -8,6 +8,6 @@ RUN apt-get update && apt-get -y install apache2
 EXPOSE 8888
 
 ENTRYPOINT ["/usr/sbin/apachectl"]
-CMD ["/sbin/apachectl", "start", "-D", "FOREGROUND"]
+CMD ["start", "-D", "FOREGROUND"]
 COPY index.html /var/www/html/
 VOLUME /var/www/html
